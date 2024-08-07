@@ -116,13 +116,13 @@ public class DemoIf {
     }
 
     // Example 9
-    int age = 20;
+    int age = 16;
     boolean isCitizen = true;
     if (isCitizen == false && age < 18) {
       System.out.println("You are not eligible due to Age and Citizen Status");
     } else if (isCitizen == false && age >= 18) {
       System.out.println("You are not eligible due to citizenship");
-    } else if (isCitizen == true && age < 18) {
+    } else if (isCitizen != false && age < 18) {
       System.out.println("You are not eligible due to Age");
     } else {
       System.out.println("Please vote");

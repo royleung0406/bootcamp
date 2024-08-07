@@ -3,20 +3,21 @@
 ## Learning Progress
 
 ### Week 1 Day 2
+
 - Primitive (int, double, long, float, byte, short, char, boolean)
-- Has higher level and low level, cannot downgrade 
+- Has higher level and low level, cannot downgrade
   -Except for byte, short with numbers not defined in higher level
 - They are all used in Maths calculartion / Camparison
 
 - String
--Operator 
+  -Operator
   charAt(), length(), Equals()
 
+**\*\*** For Comparison String, we must use .equal()**\*\***
+**\*\*** For Primitive, you can use ==, !=**\*\***
 
-****** For Comparison String, we must use .equal()******
-****** For Primitive, you can use ==, !=******
 - If-else statement
 
 New syntax " ? false : true
 
-20240807 Example 9, have bug, why cannot != in example 10
+20240807 Cannot solve Example 12 , Self Test not good, need fix fix little bug
