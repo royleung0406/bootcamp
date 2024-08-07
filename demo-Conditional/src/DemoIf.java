@@ -83,7 +83,8 @@ public class DemoIf {
     String str = "Hello";
     int len = str.length() - 1;
     if (len >= 0) {
-      System.out.println("The last character of " + str + " is " + str.charAt(len));
+      System.out
+          .println("The last character of " + str + " is " + str.charAt(len));
     } else {
       System.out.println("This is an empty string");
     }
@@ -95,10 +96,11 @@ public class DemoIf {
     int Middleword = Lastword - 1;
     int Firstword = Lastword - Lastword;
     if (Lastword != Firstword) {
-        System.out.println("" + sar.charAt(Lastword) + sar.charAt(Middleword) + sar.charAt(Firstword));
-    }else {
-        System.out.println("abc");
-      }
+      System.out.println("" + sar.charAt(Lastword) + sar.charAt(Middleword)
+          + sar.charAt(Firstword));
+    } else {
+      System.out.println("abc");
+    }
 
 
     // Result cba
@@ -107,11 +109,80 @@ public class DemoIf {
     // 2. cannot divided by 100 Or Divided by 400
 
     int year = 2000;
-    if (year % 4 == 0 && year % 100 !=0 || year % 400 == 0) {
+    if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
       System.out.println(year + " is a leap year");
-    }else {
+    } else {
       System.out.println(year + " is a not leap year");
-     }
+    }
+
+    // Example 9
+    int age = 20;
+    boolean isCitizen = true;
+    if (isCitizen == false && age < 18) {
+      System.out.println("You are not eligible due to Age and Citizen Status");
+    } else if (isCitizen == false && age >= 18) {
+      System.out.println("You are not eligible due to citizenship");
+    } else if (isCitizen == true && age < 18) {
+      System.out.println("You are not eligible due to Age");
+    } else {
+      System.out.println("Please vote");
+    }
+
+    // eligible to vote
+    // Not eligible.Age <18
+    // Not eligible.Not a citizen
+    // Not eligible.Age <18 and not a citizen
+    //
+
+    // Example 10
+    double TotalPurchase = 250.0;
+    double discount;
+    double amountToPay;
+    if (TotalPurchase >= 500) {
+      discount = TotalPurchase * 0.20;
+      amountToPay = TotalPurchase - discount;
+      System.out.println("Discount amount = " + discount);
+      System.out.println("Amount to pay = " + amountToPay);
+    } else if (TotalPurchase >= 200 && TotalPurchase < 500) {
+      discount = TotalPurchase * 0.10;
+      amountToPay = TotalPurchase - discount;
+      System.out.println("Discount amount = " + discount);
+      System.out.println("Amount to pay = " + amountToPay);
+    } else {
+      discount = 0;
+      amountToPay = TotalPurchase - discount;
+      System.out.println("Discount amount = " + discount);
+      System.out.println("Amount to pay = " + amountToPay);
+    }
+
+    // Example 11
+    char c = 'a';
+    if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') {
+      System.out.println("This letter is vowel");
+    } else {
+      System.out.println("This is a consonant");
+    }
+
+
+    // Teaching
+
+    String s1 = "Hello";
+    System.out.println(s1.contains("ll")); // True
+    System.out.println(s1.contains("lll")); // false
+    s1 = "helloll";
+    System.out.println(s1.contains("ll"));// true
+    System.out.println(s1.contains("l")); // true
+    // Wii find exact words or part of the words
+
+    // Example 12
+    //String password = "Admin12#";
+    //if (password.contains("!") || ("@") || ("#") || ("$") && password.length() >= 12) {
+      //System.out.println("This is a strong passord");
+    //} else if (password.contains("!") || password.contains("@")
+      //  || password.contains("#")
+       // || password.contains("$") && password.length() < 12) {
+    //  System.out.println("This is a weak password, password length < 12");
+    } //else
+    //  System.out.println("This is a weak password, password length < 12");
   }
 
-}

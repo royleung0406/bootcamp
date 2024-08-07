@@ -18,3 +18,5 @@
 - If-else statement
 
 New syntax " ? false : true
+
+20240807 Example 9, have bug, why cannot != in example 10

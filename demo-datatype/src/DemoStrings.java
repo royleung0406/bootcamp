@@ -8,6 +8,7 @@ public class DemoStrings {
     s = "abc";
 
 
+
     String s2 = "def"; // "def" is the string val and the assogn to String Variable
     // String can be "s3"
     // String can be "s4 = true"
@@ -17,27 +18,27 @@ public class DemoStrings {
     // String Value + Int Value = String + String (Auto Convert)
     System.out.println(s3); // "31"
 
-    s3 = s3 +true;
+    s3 = s3 + true;
     System.out.println(s3); // "31true"
 
     // In String, there are no -,*,/,%
 
     // Example 1
     int age = 40;
-    String message = "I am "+ age + "years old.";
+    String message = "I am " + age + "years old.";
     System.out.println(message);
-    
+
     // Example 2
     char grade = 'A';
     System.out.println("My Grade is" + grade);
     // String + char = String
 
-    //+= the left side ofthis symbol must need to be variable
-    System.out.println("My Grade is" + grade );
+    // += the left side ofthis symbol must need to be variable
+    System.out.println("My Grade is" + grade);
 
     String FirstName = "Roy";
     String LastName = "Leung";
-    String FullName = ""; //Empty String Value (can be anything)
+    String FullName = ""; // Empty String Value (can be anything)
     System.out.println(FullName += FirstName + LastName);
     // FullName = FullName + FirstName + LastName
 
@@ -50,18 +51,17 @@ public class DemoStrings {
     // Primitive cannot use "." (we call tool)
     // E.g You cannot int = i1 and i1.equals(i2)
 
-    boolean IsValueSame = "abc".equals(s20); //false
+    boolean IsValueSame = "abc".equals(s20); // false
 
     // charAt()
     char result = s10.charAt(1); // 2 nd letter of s10
     System.out.println(result); // e
-    System.out.println(s10.charAt(0)); //H
+    System.out.println(s10.charAt(0)); // H
 
     // length()
     System.out.println(s10.length()); // 5
     System.out.println(s10.length() >= 5); // int 5 >= 5 ? -> true
 
-
   }
-  
+
 }
