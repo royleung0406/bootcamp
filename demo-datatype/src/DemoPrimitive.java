@@ -1,4 +1,4 @@
-public class DemoPrinitive{
+public class DemoPrimitive{
   public static void main(String[] args) {
     // every line of java code must end with ;
     // Declare and assign
@@ -36,7 +36,7 @@ public class DemoPrinitive{
     char c = 'i';
     char c2 = '9';
     char c3= ' ';
-    // char c4 = '';  // at least one character cannot empty
+    // char c4 = '';  // at least one character , it cannot be empty
      
 
     double d1 = 3.3; // by default 3.3 is a double value

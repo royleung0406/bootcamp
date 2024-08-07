@@ -57,6 +57,9 @@ public class DemoStrings {
     System.out.println(result); // e
     System.out.println(s10.charAt(0)); //H
 
+    // length()
+    System.out.println(s10.length()); // 5
+    System.out.println(s10.length() >= 5); // int 5 >= 5 ? -> true
 
 
   }
