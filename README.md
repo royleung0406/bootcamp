@@ -12,4 +12,7 @@
 -Operator 
   charAt(), length(), Equals()
 
+
+****** For Comparison String, we must use .equal()******
+****** For Primitive, you can use ==, !=******
 - If-else statement
