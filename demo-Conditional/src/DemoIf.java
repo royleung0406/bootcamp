@@ -73,7 +73,7 @@ public class DemoIf {
     // Example 5
     int num;
     num = 11;
-    if (num % 2 > 0) {
+    if (num % 2 == 1) {
       System.out.println("This is an odd number");
     } else {
       System.out.println("This is an even number");
@@ -102,7 +102,16 @@ public class DemoIf {
 
 
     // Result cba
+    // Leap Year 潤年
+    // 1. Divided by 4
+    // 2. cannot divided by 100 Or Divided by 400
 
+    int year = 2000;
+    if (year % 4 == 0 && year % 100 !=0 || year % 400 == 0) {
+      System.out.println(year + " is a leap year");
+    }else {
+      System.out.println(year + " is a not leap year");
+     }
   }
 
 }
