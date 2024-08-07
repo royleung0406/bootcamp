@@ -29,14 +29,12 @@ public class DemoScanner {
     int option = s2.nextInt();
     if (option == 1) {
       System.out.println("Please input the amount you would like to deposit: ");
-      s2 = new Scanner(System.in);
       double depositedAmount = s2.nextInt();
       System.out.println("You have deposited " + depositedAmount );
       double newBalace = depositedAmount + currentBalance;
       System.out.println("Your New Balance is: " + newBalace);
     } else if (option == 2){
       System.out.println("Please input the amount you would like to withdraw: ");
-      s2 = new Scanner(System.in);
       double withdrawAmount = s2.nextInt();
       System.out.println("You have withdrawn " + withdrawAmount );
       double newBalace = currentBalance - withdrawAmount;
