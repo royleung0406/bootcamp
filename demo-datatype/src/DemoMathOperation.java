@@ -119,7 +119,7 @@ public class DemoMathOperation {
     // 3 is an integer but 3.0 is a double variable (double variable is decimal place)
   
     // ++x, x++, --x, x--
-    int k = 0;
+    int k = 6;
     int o = k++ + 3; // 4
     System.out.println(o);
     System.out.println(k);
@@ -136,6 +136,12 @@ public class DemoMathOperation {
     // Step 3. Assignment
     System.out.println(e); // 4
     System.out.println(u); // 1
+
+    int ab = 3;
+    int y = (ab++ + 3) * ab++;
+    System.out.println(y);
+    System.out.println(ab);
+    // ab++ will assign at last step unless have one more ab++, it will do before another ++
   }
   
 }

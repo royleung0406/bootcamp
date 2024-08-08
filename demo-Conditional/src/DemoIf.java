@@ -107,7 +107,7 @@ public class DemoIf {
     // Leap Year 潤年
     // 1. Divided by 4
     // 2. cannot divided by 100 Or Divided by 400
-
+    // Example 8
     int year = 2000;
     if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
       System.out.println(year + " is a leap year");
@@ -115,6 +115,25 @@ public class DemoIf {
       System.out.println(year + " is a not leap year");
     }
 
+    // Another option
+    year = 1900;
+    Boolean isLeap = false;
+    if (year % 4 == 0) { // 2004
+      if (year % 100 == 0) { // 1900 2000
+        if (year % 400 == 0) { // 2000
+          isLeap = true;
+        } else
+          isLeap = false; // 1900
+      } else
+        isLeap = true; // 2004
+    } else
+      isLeap = false; // 2003
+    if (isLeap) {
+      System.out.println(year + " is a leap year");
+      System.out.println(year + " is a leap year");
+    } else {
+      System.out.println(year + " is a not leap year");
+    }
     // Example 9
     int age = 16;
     boolean isCitizen = true;
@@ -175,14 +194,26 @@ public class DemoIf {
     // Wii find exact words or part of the words
 
     // Example 12
-    //String password = "Admin12#";
-    //if (password.contains("!") || ("@") || ("#") || ("$") && password.length() >= 12) {
-      //System.out.println("This is a strong passord");
-    //} else if (password.contains("!") || password.contains("@")
-      //  || password.contains("#")
-       // || password.contains("$") && password.length() < 12) {
-    //  System.out.println("This is a weak password, password length < 12");
-    } //else
-    //  System.out.println("This is a weak password, password length < 12");
+
+    String password = "Admin1234567#";
+    if (password.length() >= 12) {
+      if (password.contains("!") || password.contains("@")
+          || password.contains("#") || password.contains("$")) {
+        System.out.println("It's a strong password");
+      } else {
+        System.out.println("It's a weak password . No special Character");
+      }
+    } else { // Password < 12
+      System.out.println("It is a weak password. Length < 12");
+    }
+    // if (password.contains("!") || ("@") || ("#") || ("$") && password.length() >= 12) {
+    // System.out.println("This is a strong passord");
+    // } else if (password.contains("!") || password.contains("@")
+    // || password.contains("#")
+    // || password.contains("$") && password.length() < 12) {
+    // System.out.println("This is a weak password, password length < 12");
+    // else
+    // System.out.println("This is a weak password, password length < 12");
   }
+}
 

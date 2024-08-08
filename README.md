@@ -15,9 +15,26 @@
 
 **\*\*** For Comparison String, we must use .equal()**\*\***
 **\*\*** For Primitive, you can use ==, !=**\*\***
+#### Syntax Need to remember  and their meaning
+****- If-else statement
 
-- If-else statement
+1. " ? false : true"
+Meaning:    
+eg.:        
 
-New syntax " ? false : true
+2."!string.contain()"
+Meaning:    does not contain!!
+eg.:        !abc.contain("a") = if String abc does not contain "a", it will return true
 
-20240807 Cannot solve Example 12 , Self Test not good, need fix fix little bug
+3. "!"
+Meaning:    is not 
+Eg.:        !String.contain() // if(!Boolean)
+
+4. String.indexof('') 
+Meaning: the position of your target  within the string
+
+
+5. system.out.print
+Meaning = 唔係print 一次就一行
+
+6. For Loop  (inter loop can use outloop temp variable )
