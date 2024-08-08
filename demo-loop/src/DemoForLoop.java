@@ -7,11 +7,14 @@ public class DemoForLoop {
     x *= 3;
     System.out.println(x); // 81
 
+    System.out.println("");
+
     int y = 3;
     for (int i = 0; i < 3; i++) { // "i" is Counter initialization; continue condition
       y = y * 3;
     }
     System.out.println(y);
+    System.out.println("");
     // Step 1: int i =0
     // Step 2: i < 3 -> true
     // Step 3: y = y * 3
@@ -24,31 +27,39 @@ public class DemoForLoop {
     for (int i = 0; i < 5; i++) {
       System.out.println("Hello World");
     }
-
+    System.out.println("");
     // Example 2
     // we can use i for other purpose.
     for (int i = 0; i < 6; i++) {
-      System.out.println(i);
+      System.out.print(i + " ");
     }
+    System.out.println("");
 
     // Example 3
     for (int i = 0; i < 11; i++) {
       if (i % 2 == 0) {
-        System.out.println(i);
+        System.out.print(i + " ");
       }
     }
+
+    System.out.println("");
+
     // Example 4
     for (int i = 10; i > -1; i--) {
       if (i % 2 == 0) {
-        System.out.println(i);
-
+        System.out.print(i + " ");
       }
     }
+
+    System.out.println("");
+
     for (int i = 0; i < 11; i++) {
       if (i % 2 == 0) {
-        System.out.println(10 - i);
+        System.out.print(10 - i);
       }
     }
+
+    System.out.println("");
 
     // Example 5
     //
@@ -84,7 +95,7 @@ public class DemoForLoop {
 
     // Example 8 (1- 50)
     total = 0;
-    for (int i = 0; i < 51; i++) {
+    for (int i = 1; i < 51; i++) {
       if (i % 2 != 0) {
         total += i;
       } else
@@ -95,9 +106,9 @@ public class DemoForLoop {
     // Example 9
     boolean found = false;
     int pos = -1;
-    target = 'j';
+    target = 'a';
     String s3 = "abcdxyzik";
-    // print the index (position) of j , if J knot found return "-1"
+    // print the index (position) of j , if J not found return "-1"
     for (int i = 0; i < s3.length(); i++) {
       if (s3.charAt(i) == target) {
         found = true;
@@ -107,81 +118,111 @@ public class DemoForLoop {
     if (found = true) {
       System.out
           .println("The Target character you would like to know is " + pos);
+    } else {
+      System.out
+          .println("The Target character you would like to know is " + pos);
     }
     // Example 10
     String s4 = "Hello";
     char targetEndWith = 'o';
-    System.out.println(s4.charAt(s4.length()-1) == targetEndWith); // true
+    System.out.println(s4.charAt(s4.length() - 1) == targetEndWith); // true
 
     // endswith("") , startswith("")
     System.out.println(s4.endsWith("o")); // true
-    System.out.println(s4.startsWith("he")); // true
-    System.out.println(s4.startsWith("eh"));  // false
+    System.out.println(s4.startsWith("he")); // false
+    System.out.println(s4.startsWith("eh")); // false
 
     // EXAMPLE 11
     String s5 = "abcdefghijk";
     // Find "def"
-    System.out.println(s5.contains("def"));
+    System.out.println(s5.contains("def")); // true
     // Find the index berween 2 -4
     System.out.println(s5.substring(2, 5)); // cde
     System.out.println(s5.indexOf("abc")); // 0
-    System.out.println(s5.substring(0,3)); //abc
+    System.out.println(s5.substring(0, 3)); // abc
 
     // Example 11
+    // Don't use indexof() or contains()
+    // for loop, break
+    // Found or not found
     String s6 = "abcdefghijk";
     String substring = "def";
-    str = ""; 
-    for (int i =0; i < s6.length(); i++){
-        str += str;
-      }
-      //Nested loop
-      for (int i = 0; i < 3; i++){
-        for (int j = 0; j < 2; j++){
-          System.out.println("i=" + i + "j=" + j);
-        } 
-      }
-      //Example 12
-      //break
-      for(int i = 0; i < 5; i++){
-        System.out.println("Hello");
-        if (i >= 3) {
-          break;
+    boolean isSubstring = false;
+
+    // Iterate through s6 until the remaining length is less than the substring length
+    for (int i = 0; i <= s6.length() - substring.length(); i++) {
+      boolean match = false;
+
+      // Compare each character of the potential substring with the actual substring
+      for (int j = 0; j < substring.length(); j++) {
+        if (s6.charAt(i + j) == substring.charAt(j)) {
+          match = true;}
+          else {
+          match = false;
+          break;  
+          } // No need to continue checking if a character doesn't match
         }
-      }
-      // Example 13
-      // break Searching
-      String s7 = "ijkdef";
-      found = false;
 
-
-
-
-      // Example 14
-      // Continue - skip some pattern
-      for (int i =0; i <50; i++) { //0-49
-        if (i % 2 == 0){
-        continue; // skip the rest of code for iteration  
-        }
-        if (i>30){
-          break;
-        }
-        System.out.println(i);
-      }
-
-      // Example 15
-      // *******
-      for(int i =0; i <5; i++) {
-        System.out.print("*");
-      }
-      System.out.println("");
-
-      //Exxample 16
-      for (int i = 0; i < 5; i++){
-        for (int j = 0; j < 5 - i; j ++ ){
-          System.out.print("*");
-        }
-        System.out.println("");
+      // If all characters matched, it's a substring
+      if (match) {
+        isSubstring = true;
+        break; // No need to continue searching after finding a match
       }
     }
 
+    if (isSubstring) {
+      System.out.println("'" + substring + "' is a substring of '" + s6 + "'");
+    } else {
+      System.out
+          .println("'" + substring + "' is not a substring of '" + s6 + "'");
+    }
+    // Nested loop
+    for (int i = 0; i < 3; i++) {
+      for (int j = 0; j < 2; j++) {
+        System.out.println("i=" + i + "j=" + j);
+      }
+    }
+    // Example 12
+    // break
+    for (int i = 0; i < 5; i++) {
+      System.out.println("Hello");
+      if (i >= 3) {
+        break;
+      }
+    }
+    // Example 13
+    // break Searching
+    String s7 = "ijkdef";
+    found = false;
+
+
+
+    // Example 14
+    // Continue - skip some pattern
+    for (int i = 0; i < 50; i++) { // 0-49
+      if (i % 2 == 0) {
+        continue; // skip the rest of code for iteration
+      }
+      if (i > 30) {
+        break;
+      }
+      System.out.println(i);
+    }
+
+    // Example 15
+    // *******
+    for (int i = 0; i < 5; i++) {
+      System.out.print("*");
+    }
+    System.out.println("");
+
+    // Exxample 16
+    for (int i = 0; i < 5; i++) {
+      for (int j = 0; j < 5 - i; j++) {
+        System.out.print("*");
+      }
+      System.out.println("");
+    }
   }
+
+}
