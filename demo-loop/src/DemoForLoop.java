@@ -132,7 +132,7 @@ public class DemoForLoop {
     System.out.println(s4.startsWith("he")); // false
     System.out.println(s4.startsWith("eh")); // false
 
-    // EXAMPLE 11
+    // EXAMPLE Teaching command
     String s5 = "abcdefghijk";
     // Find "def"
     System.out.println(s5.contains("def")); // true
@@ -150,23 +150,23 @@ public class DemoForLoop {
     boolean isSubstring = false;
 
     // Iterate through s6 until the remaining length is less than the substring length
-    for (int i = 0; i <= s6.length() - substring.length(); i++) {
+    for (int i = 0; i < s6.length() - substring.length() + 1; i++) {
       boolean match = false;
 
       // Compare each character of the potential substring with the actual substring
       for (int j = 0; j < substring.length(); j++) {
-        if (s6.charAt(i + j) == substring.charAt(j)) {
-          match = true;}
-          else {
+        if (substring.charAt(j) == s6.charAt(i + j)) {
+          match = true;
+        } else {
           match = false;
-          break;  
-          } // No need to continue checking if a character doesn't match
-        }
+          break;
+        } //
+      }
 
       // If all characters matched, it's a substring
       if (match) {
         isSubstring = true;
-        break; // No need to continue searching after finding a match
+        break;
       }
     }
 
@@ -191,14 +191,21 @@ public class DemoForLoop {
       }
     }
     // Example 13
-    // break Searching
+    // break - searching
     String s7 = "ijkdef";
     found = false;
+    for (int i = 0; i < s7.length(); i++) {
+      if (s7.charAt(i) == 'k') {
+        found = true;
+        System.out.println("Found! your target is the substring of " + " ' " + s7 + " ' ");
+        break; // break the loop
+      }
+    }
 
 
 
     // Example 14
-    // Continue - skip some pattern
+    // Continue - skip some trial in for loop, go next trial 
     for (int i = 0; i < 50; i++) { // 0-49
       if (i % 2 == 0) {
         continue; // skip the rest of code for iteration
@@ -217,12 +224,22 @@ public class DemoForLoop {
     System.out.println("");
 
     // Exxample 16
-    for (int i = 0; i < 5; i++) {
-      for (int j = 0; j < 5 - i; j++) {
+    for (int i = 0; i < 6; i = i + 2) {
+      for (int j = 0; j < 6 -i; j++) {
         System.out.print("*");
       }
       System.out.println("");
     }
-  }
 
+    // Challenge
+
+    String serachMe = "peter piper picked a peck of pickled peppers";
+    int num = 0;
+    for (int i =0; i < serachMe.length(); i++){
+      if (serachMe.charAt(i) == 'p'){
+        num++;
+      } 
+  }System.out.println(num);
+
+ }
 }
