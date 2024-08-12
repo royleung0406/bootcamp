@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class App {
+public class Array {
     public static void main(String[] args){
         // 8 primitive
         int x =3;
@@ -156,5 +156,110 @@ public class App {
             arr10[i+1] = temp;
         }
         System.out.println(Arrays.toString(arr10));
-  }
-}
+
+        // Example 9
+        int [] arr11 = new int[] {100 , - 100, -4, 5, -2, 200 ,9};
+        int tem;
+        max = 0;
+        for (int i =0; i < arr11.length - 1; i++){
+            if (arr11[i] > arr11[i+1]) {
+            tem = arr11[i];
+            arr11[i] = arr11[i+1];
+            arr11[i+1] = tem;
+            max = arr11[i];
+        }
+        }
+        System.out.println(Arrays.toString(arr11));
+
+        // Example 10
+        int sum = 0;
+        int [] arr12 = new int [] {100, -100, -4, 5, -2, 200, 9};
+        for (int i = 0; i < arr12.length; i++ ){
+            sum += arr12[i];
+        }   System.out.println(sum);
+
+        // Example 11
+        long temp2;
+        long [] arr13 = new long[] {100, -100, -4, 5, -2, 200, 9};
+        for (int i = 0; i < arr13.length - 1; i++){
+            for (int j = 0; j < arr13.length -1; j++){
+            if (arr13[j] > arr13[j+1]) {
+            temp2 = arr13[j];
+            arr13[j] = arr13[j+1];
+            arr13[j+1] = temp2;
+            } 
+        }
+    } System.out.println(Arrays.toString(arr13));
+
+    // Default Value
+    int[] arr14 = new int [4];
+    System.out.println(Arrays.toString(arr14));
+
+    // Default value for boolean
+    boolean[] arr15 = new boolean [4];
+    System.out.println(Arrays.toString(arr15));
+
+    // Default Value for char
+    char[] arr16 = new char [3];
+    arr16[0] = ' ';
+    arr16[1] = '\u0000';
+    arr16[2] = ' ';
+    System.out.println(Arrays.toString(arr16));
+
+    if(arr16[0] == '\u0000') {
+        System.out.println("hello");
+    }
+
+    // String [], length 3
+
+    String[] s2 = new String[] {"abc" , "def" , "ghi"};
+    s2 = new String[4];
+    // Create String Array object (heap memory) [right side]
+    // s2 -> Object reference (Variable, left side)
+    s2[2] = "ijk";
+    // Create String Object and assign String address to one of the addresses inside the array
+
+    // 2D Array
+    int[][] arr18 = new int[2][3]; // 2 row (0,1) , 3 column (0,1,2)
+    arr18[1][1] = 100;
+    arr18[1][2] = -99;
+    arr18[0] [1] = 1;
+    System.out.println(Arrays.deepToString(arr18));
+
+    // for loop --> Access 2D array
+    for (int i =0; i < arr18.length; i++){
+        System.out.println("");
+        for (int j =0; j <arr18[0].length; j++){
+            System.out.print("[" + i+ "][" + j + "]=" + arr18[i][j]);
+        }
+    }
+    // Example 12
+    int cnt = 0;
+    int[] arr19 = new int[] {9, 4, 2, 2, 3, 9, 3};
+    // The number of 2 = 2
+    for (int i = 0; i < arr19.length; i++ ){
+        if(arr19[i] == 2){
+            cnt++;
+        }
+    }
+    System.out.println("The no. of 2 = "+ cnt);
+
+    // Value to index
+    // Given int value : 10 <= x <= 99
+    cnt = 0;
+    max = 0;
+    int target = -1;
+    // Given int value : 0 , 9
+    int [] count = new int[10];
+    int[] arr20 = new int[] {9, 4, 2, 2, 0, 3, 9, 9, 3};
+    for(int i =0; i < arr20.length; i++){
+        count[arr20[i-10]]++; // maximun range - minimun no + 1
+    }
+    for (int i = 0; i < count.length; i++){
+        if (count[i] > max);
+        max = count[i];
+        target = max + 10; //addd back 10
+    }
+    System.out.println(Arrays.toString(arr20));
+        } 
+    }
