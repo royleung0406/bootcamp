@@ -224,7 +224,7 @@ public class Array {
     arr18[1][1] = 100;
     arr18[1][2] = -99;
     arr18[0] [1] = 1;
-    System.out.println(Arrays.deepToString(arr18));
+    System.out.println(Arrays.deepToString(arr18)); // [[0, 1, 0], [0, 100, -99]]
 
     // for loop --> Access 2D array
     for (int i =0; i < arr18.length; i++){
@@ -244,22 +244,72 @@ public class Array {
     }
     System.out.println("The no. of 2 = "+ cnt);
 
-    // Value to index
-    // Given int value : 10 <= x <= 99
-    cnt = 0;
-    max = 0;
-    int target = -1;
-    // Given int value : 0 , 9
-    int [] count = new int[10];
-    int[] arr20 = new int[] {9, 4, 2, 2, 0, 3, 9, 9, 3};
-    for(int i =0; i < arr20.length; i++){
-        count[arr20[i-10]]++; // maximun range - minimun no + 1
-    }
-    for (int i = 0; i < count.length; i++){
-        if (count[i] > max);
-        max = count[i];
-        target = max + 10; //addd back 10
-    }
-    System.out.println(Arrays.toString(arr20));
+     // Given int value: 10 <= x <= 99
+     int[] arr20 = new int[] {99, 14, 12, 12, 10, 13, 99, 99, 13};
+     // Find the Max. Count's value -> 99
+ 
+     // value -> index
+     int[] counts = new int[90]; // 0 - 89
+     for (int i = 0; i < arr20.length; i++) {
+       counts[arr20[i] - 10]++;
+     }
+     int max2 = 0;
+     int target = -1;
+     for (int i = 0; i < counts.length; i++) {
+       if (counts[i] > max2) {
+         max2 = counts[i];
+         target = i + 10;
+       }
+     }
+     System.out.println("Max. Count's value=" + target); // Max. Count's value=99
+
+     // Arrays.copyof()
+     // Problem
+     // arr 4 -> object
+     // int object value
+     int[] arr4 = new int[] {1, 2, 3};
+     arr4 = new int[] {2, 3, 4};
+
+     // Example 1
+     int[] arr21 = new int [] {1, 2, 3};
+     int[] arr22 = arr21; // pass by reference but not value
+     System.out.println(arr21[2]); //3
+     System.out.println(arr22[2]); //3
+     
+     arr21[1] = 100;
+     System.out.println(arr21[1]);
+     System.out.println(arr22[1]);
+
+     // Example 2
+     int x1 = 10;
+     int x4 = x1; // pass by value
+     System.out.println(x4); // 10
+
+     x1 = 100;
+     System.out.println(x1); // 100
+     System.out.println(x4); // 10
+
+     // Example 3
+     String s1 = "abc";
+     String s3 = s1; // pass by value
+     s1 = "def";
+     System.out.println(s1); //def
+     System.out.println(s1); //abc
+
+        // Conclusion
+        // 8 Primitives + 8 Wrapper Classes + String -> Pass by value
+        // Other than that -> Pass by reference
+
+        // How to backup an array
+        // Arrays.copyOf
+        // Heap memory -> Create another array
+        int[] backupArray = Arrays.copyOf(arr21, arr21.length);
+        System.out.println(Arrays.toString(backupArray));
+
+        // Bubble Sort / Insertion Sort (Nested loop)
+        int[] beforeSort = new int[] {30, -3, 100, -102};
+        Arrays.sort(beforeSort); //Speed = nLogn
+        System.out.println(Arrays.toString(beforeSort));
+
         } 
     }

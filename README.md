@@ -38,3 +38,5 @@ Meaning: the position of your target  within the string
 Meaning = 唔係print 一次就一行
 
 6. For Loop  (inter loop can use outloop temp variable )
+
+Long to float

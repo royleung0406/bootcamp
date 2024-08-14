@@ -48,9 +48,13 @@ public class DemoCharInt {
       }
     }
     System.out.println(target);
-    // int s = 10000;
-    // char c2 = (char) s;
-    // System.out.println(c2);
+     //int s = 12360;
+     //char c2 = (char) s;
+     //System.out.println(c2); // Japanese "e"
+
+    // s = 77896; // 66535 + 12361 (Char overflow is from 0)
+    // char c3 = (char) s;
+    // System.out.println(c2); // Japanese "e"
 
     // if int s = 1666660000;
     // char c2 = (char) s;
@@ -62,6 +66,21 @@ public class DemoCharInt {
     b1 = (byte) 129;
     System.out.println(b1);// - 127
 
+    // byte b21 = 128; // Compiler error, Not overflow
+     int i21 =128;
+     byte b22 = (byte) i21;
+     System.out.println(b22); //Overflow
+
+     int[] arr2 = new int[3];
+     max = Integer.MIN_VALUE; // -2.1b
+     for (int i = 0; i < arr2.length; i++){
+      if (arr2 [i] > max){
+        max = arr2[i];
+      }
+     }
+
+      long l2 = Long.MIN_VALUE; // -9223372036854775808
+      System.out.println(l2); // 2^ - 63 
 
     }
     
