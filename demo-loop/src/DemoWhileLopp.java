@@ -68,5 +68,15 @@ public class DemoWhileLopp {
           count2++;
       }
       System.out.println(sum2);
+
+      int num = 54321;
+        String result = "";
+        while (num > 0) {
+          result += num % 10; // retrieve, String + int // 12345
+          num /= 10; // 54321 -> 5432
+      }
+      System.out.println(result); // 12345
+
+        
+      }
     }
-  } 

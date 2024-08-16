@@ -15,7 +15,6 @@ public class DemoStaticMethhod {
     }
 
     // Approcah 3
-    // bad, not business readable
     double[] radiusList2 = new double[] {1.3, 1.4, 1.5};
     double totalArea = 0.0;
     for (int i = 0; i < radiusList2.length; i++){

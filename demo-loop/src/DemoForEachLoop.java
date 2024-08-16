@@ -1,6 +1,9 @@
 public class DemoForEachLoop {
   public static void main(String[] args) {
-    // for loop
+
+    // Main Different betwwen for loop and for each loop
+    // for loop -> able to access all elements during each iteration
+    // for eac loop -> easy to read/use, because you cannot have index
     int[] arr = new int[]{2, 9, 10, -3};
 
     // i -> array index
@@ -23,5 +26,14 @@ public class DemoForEachLoop {
         System.out.println("You have bought the one I need");
       }
     }
+
+    //default value -- Wrapper class /String...
+    Integer x = null;
+    System.out.println(x); // null
+    // x.intValue(); //error
+
+    String s = null;
+    System.out.println(s); // null
+    // x.intValue(); //error
   }
 }
