@@ -1,31 +1,42 @@
 package customer;
 
-public class Item {
-  private double discount;
-  private double price;
-  private String itemName;
+import java.math.BigDecimal;
 
-  public Item (double price, String itemName){
+public class Item {
+  private double price;
+  private int quantity;
+
+  // constructor
+  public Item(double price, int quantity) {
     this.price = price;
-    this.itemName = itemName;
+    this.quantity = quantity;
   }
 
+  // getter, setter
   public double getPrice() {
     return this.price;
   }
-  
-  public void setPrice(double x) {
-    this.price = x;
 
-  }
-  
-    public String getItName() {
-      return this.itemName;
-    }
-    
-    public void setItName(String x) {
-      this.itemName = x;
-  
-    }
+  public int getQuantity() {
+    return this.quantity;
   }
 
+  // Not a must to use BigDecimal (double * int)
+  public double subtotal() {
+    // int * double -> 1.0 * 0.2
+    // double * double -> 0.1 * 0.2
+    BigDecimal total = BigDecimal.valueOf(0);
+    total = BigDecimal.valueOf(this.price) //
+        .multiply(BigDecimal.valueOf(this.quantity));
+    // multiply() -> return a new BigDecimal Object
+    return total.doubleValue();
+  }
+
+  public static void main(String[] args) {
+    int x = 2; // 2.0
+    double y = 0.2;
+    System.out.println(x * y);
+    System.out.println(x + y);
+    System.out.println(x - y);
+  }
+}

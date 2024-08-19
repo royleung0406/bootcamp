@@ -1,53 +1,51 @@
-import java.util.Arrays;
-
 public class Demo {
-  public static void main(String[] args) {  
+  public static void main(String[] args) {
     // memory
-    int x =3;
+    int x = 3;
 
-    // arr is object reference -> object address
-    // int arrary object (length = 2)
+    // arr -> object ref -> array object address
+    // int arrar object (length=2)
     int[] arr = new int[2];
 
-    // c object ref
-    // Cat c is object
-    Cat cat = new Cat();
-    //System.out.println(cat.name); //  Not ok, because "name" is private
+    // cat -> object ref -> cat object address
+    // Cat object in heap memory
+    Cat cat = new Cat(); //
     cat.setName("John");
-    cat.setColor("white");
-    cat.setName("Roal");
-    cat.setColor("black");
-    System.out.println(cat.getName()); // ok, because you use the return type from Private to Public
-    System.out.println(cat.getColor()); // ok, because you use the return type from Private to Public
+    System.out.println(cat.getName()); 
+    
+    Cat[] cats = new Cat[3];
 
+    // if attribute is private, then you cannot read the attribute directly by obj ref.
+    // For example, cat.name and cat.color
 
-    Cat cat2 = new Cat();
-    cat2.setName("Peter");
-    cat2.setColor("Black");
-    System.out.println(cat2.getName()); // ok, because you use the return type from Private to Public
-    System.out.println(cat2.getColor()); // ok, because you use the return type from Private to Public
+    Cat cat2 = new Cat(); //
+    String name = "Peter";
+    cat2.setName(name);
+    System.out.println(cat2.getName());
 
-    Staff staff = new Staff(); // Staff() Constructor
-    staff.setHeight(180);
-    staff.setWeight(75);
-    // get BMI() class encapaulate complex calculation
-    System.out.println(staff.getBMI());
+    cat.getName(); // return this.name;
+    cat2.getName(); // return this.name;
 
-    Staff staff3 = new Staff("Roy", "Leung", 1.8, 76.0);
-    System.out.println(staff3.getFullName());
-    System.out.println(staff3.getBMI());
+    // You cannot use "this" in main
+    // System.out.println(this.name); 
 
-    StringBox str = new StringBox("abbcdefggh");
-    System.out.println(str.charAt(1));
-    System.out.println(str.subString(0, 4));
+    // setColor
+    cat.setColor("BLACK");
+    // getColor
+    System.out.println(cat.getColor());
 
-    StringBox sb2 = str;
-    System.out.println(str);
-    System.out.println(sb2);
-    str.setCharAt(2, 'c');
-    System.out.println(String.valueOf(str));
-    System.out.println(String.valueOf(sb2));
+    System.out.println(cat.getAge()); // 0
+    cat.setAge(10);
+    System.out.println(cat.getAge()); // 10
 
-    char[] arr = str.getCharacters();
+    Staff staff = new Staff(); // Staff() -> constructor
+    staff.setHeight(1.75); // 175cm
+    staff.setWeight(73.25);
+    // getBMI() -> class encapsulates complicated behavior
+    System.out.println(staff.getBMI()); // 23.918367346938776
+
+    Staff staff2 = new Staff("Jenny", "Chan", 1.65, 60.2);
+    System.out.println(staff2.getBMI()); // 22.11202938475666
+    
   }
 }
