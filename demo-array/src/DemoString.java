@@ -37,7 +37,7 @@ public class DemoString {
 
       // = , +=
       // concat()
-      String s6 = "hello";
+      String s6 = "hello"; 
       s6 = s6 + "!!!";
 
       String s7 = " hello";
