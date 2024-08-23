@@ -3,7 +3,7 @@ package customer;
 public class Shopping {
 
   // Testing
-  public static void main(String[] args) {
+  public static void main(String args[]) {
     // Create User
     // Create Orders
     // Create items

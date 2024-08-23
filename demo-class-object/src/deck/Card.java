@@ -1,7 +1,6 @@
 package deck;
 
-// enum
-public class Card {
+class Card {
   // !!! Make you know the difference between instance variable, static
   // variable, static final variable
 
