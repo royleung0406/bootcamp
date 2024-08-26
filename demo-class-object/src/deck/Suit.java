@@ -75,5 +75,6 @@ public class Suit {
   public static void main(String[] args) {
     // card.getSuit().getValue() == 1
     // if (card.getSuit().isDiamond())
+    System.out.println(2 % 6);
   }
 }

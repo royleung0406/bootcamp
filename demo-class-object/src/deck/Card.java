@@ -7,11 +7,15 @@ class Card {
   // String -> good presentation, built-in equals() & compareTo()
   // "01", "02", "09, "10", "JACK", "QUEEN", "KING"
   private Rank rank; // 1, 2, 3, 4, 5, 6, 7, 8, 9, T, J, Q, K
-  private Suit suit; // DIAMOND, CLUB, HEART, SPADE
+  private Suit2 suit; // DIAMOND, CLUB, HEART, SPADE
 
-  public Card(Rank rank, Suit suit) {
+  public Card(Rank rank, Suit2 suit) {
     this.rank = rank;
     this.suit = suit;
+  }
+
+  public static Card of(Rank rank, Suit2 suit) {
+    return new Card(rank, suit);
   }
 
   // getters
@@ -19,8 +23,13 @@ class Card {
     return this.rank;
   }
 
-  public Suit getSuit() {
+  public Suit2 getSuit() {
     return this.suit;
+  }
+
+  public boolean equals(Card card) {
+    return this.rank.equals(card.getRank()) //
+        && this.suit == card.getSuit();
   }
 
   // instance method
@@ -32,13 +41,13 @@ class Card {
     // this (address) vs card (address)
     int rankResult = this.rank.compareTo(card.getRank());
     if (rankResult == 0) {
-      if (this.suit.compareTo(card.getSuit()) == 0) { //
+      if (this.suit.compare(card.getSuit()) == 0) { // !!! should use compare()
         return 0;
-      } else if (this.suit.compareTo(card.getSuit()) > 0) { //
+      } else if (this.suit.compare(card.getSuit()) > 0) { // !!! should use
+                                                          // compare()
         return 1;
-      } else {
-        return -1;
       }
+      return -1; // base case
     }
     return rankResult;
   }
@@ -52,10 +61,10 @@ class Card {
 
   public static void main(String[] args) {
     // valueOf(''),
-    Card c1 = new Card(Rank.ofACE(), Suit.ofDiamond());
-    Card c2 = new Card(Rank.ofACE(), Suit.ofClub());
-    Card c3 = new Card(Rank.ofJACK(), Suit.ofDiamond());
-    Card c4 = new Card(Rank.ofJACK(), Suit.ofDiamond());
+    Card c1 = new Card(Rank.ofACE(), Suit2.DIAMOND);
+    Card c2 = new Card(Rank.ofACE(), Suit2.CLUB);
+    Card c3 = new Card(Rank.ofJACK(), Suit2.DIAMOND);
+    Card c4 = new Card(Rank.ofJACK(), Suit2.DIAMOND);
 
     System.out.println(c2.compareTo(c1)); // 1
     System.out.println(c1.compareTo(c2)); // -1
