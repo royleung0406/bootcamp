@@ -1,5 +1,5 @@
 package shape;
 
-public class Color {
-  
+public enum Color {
+  RED, YELLOW, GREEN,;
 }

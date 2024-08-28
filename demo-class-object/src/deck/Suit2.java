@@ -4,10 +4,10 @@ public enum Suit2 {
   // private static final Suit2[] suits = new Suit2[] {Suit2.CLUB, Suit2.HEART, Suit2.DIAMOND, Suit2.SPADE};
   // create enum objects
   // DIAMOND, // call empty constructor
-  CLUB(2), //
-  SPADE(4), //
   DIAMOND(1), //
+  CLUB(2), //
   HEART(3), //
+  SPADE(4), //
   ;
 
   // Class Section

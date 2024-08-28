@@ -2,6 +2,7 @@ package valueReference;
 
 import java.util.Arrays;
 
+// !!! In the Internet, Java always "Pass by value". Do you know why?
 public class DemoPassByReference {
 
   public static void main(String[] args) {
@@ -53,6 +54,7 @@ public class DemoPassByReference {
   }
 
   // So, array is one of type that is "pass by reference"
+  // passing a copy of object address
   public static void moveMaxToTail(int[] arr) {
     int backup;
     for (int i = 0; i < arr.length - 1; i++) {

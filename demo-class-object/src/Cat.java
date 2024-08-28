@@ -1,34 +1,33 @@
-public class Cat { //blueprint
-  //attributes
-  private String color;
+public class Cat { // blueprint
+  // attributes
   private String name;
+  private String color;
   private int age;
 
-    // instance method (object method)
-    // getter
-    public String getName(){
-      return this.name;
-    }
+  // instance method (object method)
+  // getter
+  public String getName() {
+    return this.name;
+  }
 
-    public void setName(String x){
-      this.name = x ;
-    }
+  public void setName(String name) {
+    this.name = name; //
+  }
 
-      public void setColor (String x){
-        this.color = x;
-      }
+  public String getColor() {
+    return this.color;
+  }
 
-      public String getColor(){
-        return this.color;
-      }
+  public void setColor(String color) {
+    this.color = color;
+  }
 
-      public void setAge (int age){
-        this.age = age;
-      }
+  public int getAge() {
+    return this.age;
+  }
 
-      public int getAge(){
-        return this.age;
-      }
-    }
-      
+  public void setAge(int age) {
+    this.age = age;
+  }
 
+}
