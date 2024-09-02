@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashSet;
 
-public class DemoSet {
+public class DemoHashSet {
   public static void main(String[] args) {
     // Collection.class -> Basic operation of collection
     Collection<String> strings = new ArrayList<>();
@@ -34,5 +34,15 @@ public class DemoSet {
     strings.add("abc");
     strings.add("abc");
     System.out.println(strings.size()); // 2
+
+    // ArrayList (array) vs HashSet (hash + array)
+    // Same:
+    // !!! 1. HashSet has NO ordering
+    // 2. Add/ remove -> array -> recreate array object
+
+    // Difference:
+    // !!! 1. Polymorphism -> different implementation -> add() -> return false if duplicated
+    // 2. Searching by hash code to find out duplicated
+
   }
 }
