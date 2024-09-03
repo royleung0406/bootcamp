@@ -8,6 +8,8 @@ public class DemoQueue {
     // LinkedList (Queue vs Deque vs List)
     Queue<String> queue = new LinkedList<>();
     // 10000 lines ....
+    String s = "Roy";
+    System.out.println(s.charAt(0));
     queue.add("abc"); // Collection method
     queue.add("def"); // Collection method
     queue.add("ijk"); // Collection method

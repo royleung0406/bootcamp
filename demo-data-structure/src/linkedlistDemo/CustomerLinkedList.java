@@ -65,5 +65,5 @@ public class CustomerLinkedList {
     customerLinkedList.addFirst(new Customer("Jenny", 25));
     System.out.println(customerLinkedList);
     // Customers[Customer(name=Jenny, age=25),Customer(name=John, age=10),Customer(name=Peter, age=20),null]
-  }
+  } 
 }
