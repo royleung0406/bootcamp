@@ -26,7 +26,8 @@ public class DemoPriorityQueue {
 
     // Custom order
     // Tips: Class for sorting (Comparator)
-    // Queue<String> pq2 = new PriorityQueue<>(...);
+    Queue<Person> pq2 = new PriorityQueue<>();
+    pq2.add(null);
 
   }
 }
