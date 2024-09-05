@@ -74,7 +74,8 @@ public class DemoHashMap {
     }
     System.out.println("Sum of all Person's age=" + sum);
 
-    // entrySet(), keySet(), values() -> For Loop
+    // 3 ways to do For Loop in Map
+    // entrySet(), keySet(), values()
 
     System.out.println(personMap.size()); // 2
     personMap.clear();
@@ -90,8 +91,16 @@ public class DemoHashMap {
     citizenMap.put(new HKID("1234"), john);
     citizenMap.put(new HKID("1235"), peter);
 
-    System.out.println(citizenMap.get(new HKID("1234")));
+    System.out.println(citizenMap.get(new HKID("1234"))); // Person(name=John, age=30)
+
+    // put(new HKID("1234"), vincent)
     citizenMap.put(new HKID("1234"), new Person("Vincent", 10));
-    
+    // size
+    System.out.println(citizenMap.size()); // 2
+
+    // The implementation of put() method -> object's equals() & hashCode()
+
+    // Object.class -> new HKID("1234") != new HKID("1234")
+    // HKID.class -> After Override, new HKID("1234") == new HKID("1234")
   }
 }
