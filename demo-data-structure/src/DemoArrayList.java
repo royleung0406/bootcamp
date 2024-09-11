@@ -32,7 +32,7 @@ public class DemoArrayList {
     for (String s : strings) {
       System.out.println(s);
     }
-
+    System.out.println("00000 " + strings.get(0)); // opq
     System.out.println(strings.get(1)); // opq
 
     strings.remove(new String("ijk")); // !!! equals()

@@ -119,7 +119,8 @@ public class Array {
     // Approach 1
     String[] arr5 = new String[3];
     //Approach 2
-    String[] arr6 = new String[]{"def" , "abc" , "ghi"};
+    String[] arr6 = new String[]{"def" , "def" , "ghi"};
+    System.out.println("Testing for =" + arr6[0].equals(arr6[1]));
     // Approach 3
     String[] arr7 = {"abc" , "def" , "ghi"};
 

@@ -121,7 +121,5 @@ public class Box {
 
     System.out.println(integerLinkedList.size()); // 3, while loop or cache
                                                   // store ...
-
-
   }
 }
